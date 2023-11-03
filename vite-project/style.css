@@ -2,8 +2,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-align: center;
 }
 
 body {
-  background-color: #333333; 
+  background-color: #333333;
+  color: #e5e5e5;
 }
+
+li {
+  list-style: none;
+}
+

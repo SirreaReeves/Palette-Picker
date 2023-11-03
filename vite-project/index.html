@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Palette Picker</title>
   </head>
@@ -13,15 +13,15 @@
       <form id="palette-form">
         <h2 id="form-heading" aria-labelledby="form-heading">Add a Palette</h2>
         <label for="palette-title">Palette Title:</label>
-        <input type="text" id="palette-title">
+        <input type="text" id="palette-title" name="palette-title">
 
-        <input type="color" id="color1" value="#ff0000">
+        <input type="color" id="color1" name="color1">
         <label for="color1">Color #1</label>
 
-        <input type="color">
+        <input type="color" id="color2" name="color2">
         <label for="color2">Color #2</label>
 
-        <input type="color">
+        <input type="color" id="color3" name="color3">
         <label for="color3">Color #3</label>
 
         <fieldset>
@@ -33,7 +33,7 @@
           <input type="radio" name="temperature" id="cool" value="cool">
           <label for="cool">Cool</label>
         </fieldset>
-        <button type="submit">Create the Palette</button>
+        <button type="submit" id="button">Create the Palette</button>
       </form>
 
       <section id="palettes" aria-labelledby="palettes-heading">
