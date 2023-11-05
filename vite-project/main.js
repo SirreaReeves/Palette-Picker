@@ -20,18 +20,22 @@ const handleEvent = (event) => {
 
 button.addEventListener('click', handleEvent);
 
-const copybutton = document.querySelector('.copy-button');
-const hexcode = document.querySelector('#hexcode');
-const copy = () => {
-    
-    hexcode.select();
-    hexcode.setSelectionRange(0, 99999);
-    document.execCommand('copy');
-    copybutton.textContent = 'Copied!';
-    
-};
+const copyButton = document.querySelectorAll('.copy-button');
+const copy = (event) => {
+    event.addEventListener('click', async event => {
+        if (!navigator.clipboard) {
+            return;
+          }
+          const hexCode = event.target.textContent;
+          try {
+            await navigator.clipboard.writeText(hexCode);
+            event.target.textContent = 'Copied!';
+          } catch (err) {
+            console.error('Failed to copy!', err);
+          }
+    })
+}
 
-copybutton.addEventListener('click', copy);
-
-// navigator.clipboard.writeText(hexcode.value);
-//   hexcode.textContent = 'Copied!';
+const hexCode = document.querySelectorAll('.hexcode');
+hexCode.forEach(copy);
+copyButton.forEach(copy);
