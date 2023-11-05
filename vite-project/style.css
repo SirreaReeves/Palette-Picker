@@ -115,10 +115,10 @@ fieldset {
 }
 
 .palette-card {
-  border: #e5e5e5;
+  /* border: #e5e5e5; */
   height: 18rem;
   width: 16rem;
-  margin: 1rem;
+  margin-top: 1rem;
   background-color: #333333;
   border-top-right-radius: 1rem;
 }
@@ -169,13 +169,14 @@ li {
   justify-content: center;
   margin-left: 3rem;
   margin-right: -3rem;
-  margin-bottom: 1rem;
   align-items: center;
+  /* flex-direction: column; */
   flex-wrap: wrap;
   background-color: #6b6b6b;
   border-style: none;
   color: #e5e5e5;
-  width: 5rem;
+  font-size: 0.8rem;
+  width: 6em;
   height: 2rem;
 
 }
@@ -186,7 +187,8 @@ li {
   background-color: #6b6b6b;
   color: #e5e5e5;
   border-style: none;
-  width: 5rem;
+  /* width: 4rem; */
+  font-size: 0.8rem;
 }
 
 
@@ -214,6 +216,7 @@ p {
   align-items: center;
   color: black;
   text-align: center;
+  font-size: 0.8rem;
 }
 
 .examples {
@@ -230,52 +233,61 @@ p {
   margin-left: 3rem;
   background-color: #c92929;
   height: 2rem;
+  width: 7rem;
 }
 
 #example2 {
   margin-left: 3rem;
   background-color: #2f5a8b;
   height: 2rem;
+  width: 7rem;
 }
 
 #example3 {
   margin-left: 3rem;
   background-color: #327a5f;
   height: 2rem;
+  width: 7rem;
 }
 
 #example4 {
   margin-left: 3rem;
   background-color: #3A5199;
   height: 2rem;
+  width: 7rem;
 }
 
 #example5 {
   margin-left: 3rem;
   background-color: #2F2E33;
   height: 2rem;
+  width: 7rem;
 }
 
 #example6 {
   margin-left: 3rem;
   background-color: #D5D6D2;
   height: 2rem;
+  width: 7rem;
 }
 
 #example7 {
   margin-left: 3rem;
   background-color: #A10115;
   height: 2rem;
+  width: 7rem;
 }
 
 #example8 {
   margin-left: 3rem;
   background-color: #C0B2B5;
   height: 2rem;
+  width: 7rem;
 }
 
 #example9 {
   margin-left: 3rem;
   background-color: #600A0A;
   height: 2rem;
+  width: 7rem;
 }

@@ -20,22 +20,26 @@ const handleEvent = (event) => {
 
 button.addEventListener('click', handleEvent);
 
-const copyButton = document.querySelectorAll('.copy-button');
-const copy = (event) => {
-    event.addEventListener('click', async event => {
-        if (!navigator.clipboard) {
-            return;
-          }
-          const hexCode = event.target.textContent;
-          try {
-            await navigator.clipboard.writeText(hexCode);
-            event.target.textContent = 'Copied!';
-          } catch (err) {
-            console.error('Failed to copy!', err);
-          }
-    })
-}
+const copyToClipboard = async (element, timeout) => {
+    if (!navigator.clipboard) {
+      return;
+    }
+    const hexCode = element.textContent;
+    try {
+      await navigator.clipboard.writeText(hexCode);
+      element.textContent = 'Copied hex!';
+      setTimeout(() => {
+        element.textContent = hexCode;
+      }, timeout);
+    } catch (err) {
+      console.error('Failed to copy!', err);
+    }
+  };
 
-const hexCode = document.querySelectorAll('.hexcode');
-hexCode.forEach(copy);
-copyButton.forEach(copy);
+const copyButton = document.querySelectorAll('.copy-button');
+copyButton.forEach((element) => {
+    element.addEventListener('click', (event) => {
+        copyToClipboard(event.target, 1000);
+    });
+});
+
