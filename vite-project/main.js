@@ -21,14 +21,17 @@ const handleEvent = (event) => {
 button.addEventListener('click', handleEvent);
 
 const copybutton = document.querySelector('.copy-button');
-const copy = (event) => {
-    const hexcode = document.querySelector('#hexcode');
+const hexcode = document.querySelector('#hexcode');
+const copy = () => {
     
     hexcode.select();
     hexcode.setSelectionRange(0, 99999);
-    navigator.clipboard.writeText(hexcode.value);
+    document.execCommand('copy');
     copybutton.textContent = 'Copied!';
-
+    
 };
 
 copybutton.addEventListener('click', copy);
+
+// navigator.clipboard.writeText(hexcode.value);
+//   hexcode.textContent = 'Copied!';

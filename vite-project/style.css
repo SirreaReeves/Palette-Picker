@@ -89,7 +89,7 @@ fieldset {
   color: #e5e5e5;
   border: none;
   width: 8rem;
-  margin-left: 3.5rem;
+  margin-left: 6rem;
 }
 
 #palette-container {
@@ -116,9 +116,8 @@ fieldset {
 
 .palette-card {
   border: #e5e5e5;
-  /* border-style: solid; */
-  height: 15rem;
-  width: 15rem;
+  height: 18rem;
+  width: 16rem;
   margin: 1rem;
   background-color: #333333;
   border-top-right-radius: 1rem;
@@ -168,6 +167,9 @@ li {
 .copy-button {
   display: flex;
   justify-content: center;
+  margin-left: 3rem;
+  margin-right: -3rem;
+  margin-bottom: 1rem;
   align-items: center;
   flex-wrap: wrap;
   background-color: #6b6b6b;
@@ -175,7 +177,18 @@ li {
   color: #e5e5e5;
   width: 5rem;
   height: 2rem;
+
 }
+
+#hexcode {
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: #6b6b6b;
+  color: #e5e5e5;
+  border-style: none;
+  width: 5rem;
+}
+
 
 .delete-button {
   background-color: #6b6b6b;
@@ -187,6 +200,82 @@ li {
   height: 1rem;
   justify-content: center;
   align-items: center;
-  margin-top: 7rem;
-  margin-left: 4.2rem;
+  margin-left: 4.8rem;
+  margin-top: 2rem
+}
+
+.text {
+  color: white;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  text-align: center;
+}
+
+.examples {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8rem;
+  height: 3rem;
+  margin-left: 1rem;
+  background: linear-gradient(to top, black 50%, white 50%)
+}
+
+#example1 {
+  margin-left: 3rem;
+  background-color: #c92929;
+  height: 2rem;
+}
+
+#example2 {
+  margin-left: 3rem;
+  background-color: #2f5a8b;
+  height: 2rem;
+}
+
+#example3 {
+  margin-left: 3rem;
+  background-color: #327a5f;
+  height: 2rem;
+}
+
+#example4 {
+  margin-left: 3rem;
+  background-color: #3A5199;
+  height: 2rem;
+}
+
+#example5 {
+  margin-left: 3rem;
+  background-color: #2F2E33;
+  height: 2rem;
+}
+
+#example6 {
+  margin-left: 3rem;
+  background-color: #D5D6D2;
+  height: 2rem;
+}
+
+#example7 {
+  margin-left: 3rem;
+  background-color: #A10115;
+  height: 2rem;
+}
+
+#example8 {
+  margin-left: 3rem;
+  background-color: #C0B2B5;
+  height: 2rem;
+}
+
+#example9 {
+  margin-left: 3rem;
+  background-color: #600A0A;
+  height: 2rem;
 }
