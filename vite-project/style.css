@@ -134,7 +134,7 @@ li {
   list-style: none;
 }
 
-#neutral-tag {
+.neutral-tag {
   background-color: #555555;
   color: #e5e5e5;
   display: flex;
@@ -144,7 +144,7 @@ li {
   height: 2rem;
 }
 
-#cool-tag {
+.cool-tag {
   background-color: #131e44;
   color: #e5e5e5;
   display: flex;
@@ -154,7 +154,7 @@ li {
   height: 2rem;
 }
 
-#warm-tag {
+.warm-tag {
   background-color: #431112;
   color: #e5e5e5;
   display: flex;
@@ -170,7 +170,6 @@ li {
   margin-left: 3rem;
   margin-right: -3rem;
   align-items: center;
-  /* flex-direction: column; */
   flex-wrap: wrap;
   background-color: #6b6b6b;
   border-style: none;
@@ -187,7 +186,6 @@ li {
   background-color: #6b6b6b;
   color: #e5e5e5;
   border-style: none;
-  /* width: 4rem; */
   font-size: 0.8rem;
 }
 

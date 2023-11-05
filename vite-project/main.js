@@ -1,21 +1,43 @@
 import palettes from './palettes.json' assert {type: 'json'};
 console.log(palettes); 
 
-const makePalette = (obj) => {
-    return `<div>${obj["palette-title"]}</div>`
-};
-
 const button = document.querySelector('#form-button');
-const handleEvent = (event) => {
+const handleEvent = (e) => {
     e.preventDefault();
     const form = document.querySelector('#palette-form');
     const formData = new FormData(form);
     const obj = Object.fromEntries(formData);
-    
+
+    const paletteTemplate = document.querySelector('.examples');
+    const clone = paletteTemplate.cloneNode(true);
+
+    const h3 = document.createElement('h3');
+    h3.innerHTML = obj["palette-title"];
+    h3.setAttribute('class', 'default-palette-heading');
+    clone.appendChild(h3);
+
     const li = document.createElement('li');
-    li.innerHTML = makePalette(obj);
+    li.innerHTML = obj["palette-card"];
+    li.setAttribute('class', 'palette-card');
     const ul = document.querySelector('#palette-list');
     ul.appendChild(li);
+
+    const copyButton = document.createElement('button');
+    copyButton.textContent = 'Copy';
+    copyButton.setAttribute('class', 'copy-button');
+    clone.appendChild(copyButton);
+
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Delete Palette';
+    deleteButton.setAttribute('class', 'delete-button');
+    clone.appendChild(deleteButton);
+
+    const h5 = document.createElement('h5');
+    h5.textContent = obj["palette-temperature"];
+    h5.setAttribute('class', 'neutral-tag', 'warm-tag', 'cool-tag');
+    clone.appendChild(h5);
+
+    document.querySelector('#palette-container').appendChild(clone);
 };
 
 button.addEventListener('click', handleEvent);
@@ -43,3 +65,10 @@ copyButton.forEach((element) => {
     });
 });
 
+const deleteButton = document.querySelector('.delete-button');
+
+const deletePalette = (event) => {
+    const remove = document.querySelector('.examples');
+    remove.remove();
+};
+deleteButton.addEventListener('click', deletePalette);
