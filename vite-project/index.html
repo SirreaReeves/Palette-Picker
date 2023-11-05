@@ -9,21 +9,29 @@
   </head>
   <body>
     <main>
-      <h1>Palette Picker</h1>
+      <h1 id="page-heading" aria-labelledby="page-heading">Palette Picker</h1>
       <form id="palette-form">
         <h2 id="form-heading" aria-labelledby="form-heading">Add a Palette</h2>
-        <label for="palette-title">Palette Title:</label>
-        <input type="text" id="palette-title" name="palette-title">
-
-        <input type="color" id="color1" name="color1">
-        <label for="color1">Color #1</label>
-
-        <input type="color" id="color2" name="color2">
-        <label for="color2">Color #2</label>
-
-        <input type="color" id="color3" name="color3">
-        <label for="color3">Color #3</label>
-
+        <section id="palette-title-container">
+          <label for="palette-title" id="palette-title-label">Palette Title:</label>
+          <input type="text" id="palette-title" name="palette-title">
+        </section>
+        
+          <section id="color-input1">
+            <label for="color1" class="color-label">Color #1</label>
+            <input type="color" id="color1" name="color1">
+          </section>
+          
+          <section id="color-input2">
+            <label for="color2" class="color-label">Color #2</label>
+            <input type="color" id="color2" name="color2">
+          </section>
+          
+          <section id="color-input3">
+          <label for="color3" class="color-label">Color #3</label>
+          <input type="color" id="color3" name="color3">
+          </section>
+        
         <fieldset>
           <legend>Temperature</legend>
           <input type="radio" name="temperature" id="warm" value="warm">
@@ -33,37 +41,57 @@
           <input type="radio" name="temperature" id="cool" value="cool">
           <label for="cool">Cool</label>
         </fieldset>
-        <button type="submit" id="button">Create the Palette</button>
+        <button type="submit" id="form-button">Create the Palette</button>
       </form>
-
+      
       <section id="palettes" aria-labelledby="palettes-heading">
         <h2 id="palettes-heading">Palettes</h2>
-        <ul id="palette-list">
-          <li>
-            <h3>Marcy</h3>
-            <button type="button">Copy</button>
-            <button type="button">Delete Palette</button>
-          </li>
-          <h5>neutral</h5>
 
-          <li>
-            <h3>Sleek and Modern</h3>
-            <button type="button">Copy</button>
-            <button type="button">Delete Palette</button>
-          </li>
-          <h5>cool</h5>
+        <section id="palette-container">
+          <ul id="palette-list">
+            <li class="palette-card">
+              <h3 class="default-palette-heading">Marcy</h3>
+              <button type="button" class="copy-button">Copy<span>#c92929</span></button>
+              <button type="button" class="copy-button">Copy<span>#2f5a8b</span></button>
+              <button type="button" class="copy-button">Copy<span>#327a5f</span></button>
+              <button type="button" class="delete-button">Delete Palette</button>
+              <h5 id="neutral-tag">neutral</h5>
+            </li>
+            
+            <li class="palette-card">
+              <h3 class="default-palette-heading">Sleek and Modern</h3>
+              <button type="button" class="copy-button">Copy
+                <span class="hexcode">#3A5199</span>
+              </button>
+              <button type="button" class="copy-button">Copy
+                <span class="hexcode">#2F2E33</span>
+              </button>
+              <button type="button" class="copy-button">Copy
+                <span class="hexcode">#D5D6D2</span>
+              </button>
+              <button type="button" class="delete-button">Delete Palette</button>
+              <h5 id="cool-tag">cool</h5>
+            </li>
+            
+            <li class="palette-card">
+              <h3 class="default-palette-heading">Winter Reds</h3>
+              <button type="button" class="copy-button">Copy
+                <span class="hexcode">#A10115</span>
+              </button>
+              <button type="button" class="copy-button">Copy
+                <span class="hexcode">#C0B2B5</span>
+              </button>
+              <button type="button" class="copy-button">Copy
+                <span class="hexcode">#600A0A</span>
+              </button>
+              <button type="button" class="delete-button">Delete Palette</button>
+              <h5 id="warm-tag">warm</h5>
+            </li>
+          </ul>
+        </section>
 
-          <li>
-            <h3>Winter Reds</h3>
-            <button type="button">Copy</button>
-            <button type="button">Delete Palette</button>
-          </li>
-          <h5>warm</h5>
-        </ul>
       </section>
-
-
     </main>
-    <script type="module" src="/main.js"></script>
+    <script type="module" src="main.js"></script>
   </body>
 </html>
